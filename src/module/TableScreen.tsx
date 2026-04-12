@@ -2,7 +2,7 @@ import React from 'react';
 import { Container } from 'reactstrap';
 import { useTranslation } from 'react-i18next';
 
-export function TableScreen(props) {
+export function TableScreen() {
 	const { t } = useTranslation();
 
 	return (

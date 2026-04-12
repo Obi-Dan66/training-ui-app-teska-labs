@@ -11,7 +11,7 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 const buildConfig = {
 	mode: "production",
-	entry: path.resolve(__dirname, "../src/index.jsx"),
+	entry: path.resolve(__dirname, "../src/index.tsx"),
 	output: {
 		path: path.resolve(__dirname, "../dist"),
 		filename: "bundle.[contenthash].js",
@@ -19,7 +19,7 @@ const buildConfig = {
 		publicPath: "./"
 	},
 	resolve: {
-		extensions: [".js", ".jsx"]
+		extensions: ['.ts', '.tsx', '.js', '.jsx'],
 	},
 	plugins: [
 		new HtmlWebpackPlugin({

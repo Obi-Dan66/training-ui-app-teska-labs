@@ -5,7 +5,7 @@ const commonConfig = require('./webpack.common');
 
 const devConfig = {
 	mode: "development",
-	entry: path.resolve(__dirname, "../src/index.jsx"),
+	entry: path.resolve(__dirname, "../src/index.tsx"),
 	devtool: "inline-source-map",
 	devServer: {
 		static: path.resolve(__dirname, "../public"),
@@ -15,7 +15,7 @@ const devConfig = {
 		hot: true
 	},
 	resolve: {
-		extensions: [".js", ".jsx"]
+		extensions: ['.ts', '.tsx', '.js', '.jsx'],
 	},
 	plugins: [
 		new HtmlWebpackPlugin({

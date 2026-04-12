@@ -1,10 +1,11 @@
-import { Module } from "asab_webui_components";
+import { Module } from 'asab_webui_components';
+import { AppInterface } from '../interfaces/AppInterface';
 
-import { TableScreen } from './TableScreen.jsx';
+import { TableScreen } from './TableScreen';
 
 export default class TableApplicationModule extends Module {
-	constructor(app, name) {
-		super(app, "TableApplicationModule");
+	constructor(app: AppInterface) {
+		super(app, 'TableApplicationModule');
 
 		app.Router.addRoute({
 			path: "/",
