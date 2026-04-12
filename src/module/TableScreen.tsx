@@ -3,11 +3,11 @@ import { Container } from 'reactstrap';
 import { useTranslation } from 'react-i18next';
 
 export function TableScreen() {
-	const { t } = useTranslation();
+  const { t } = useTranslation();
 
-	return (
-		<Container className='h-100'>
-			{t('Training|Hello, there is nothing here yet!')}
-		</Container>
-	);
+  return (
+    <Container className="h-100">
+      {t('Training|Hello, there is nothing here yet!')}
+    </Container>
+  );
 }
