@@ -1,4 +1,3 @@
-import React from 'react';
 import { useNavigate } from 'react-router';
 import { useTranslation } from 'react-i18next';
 import {
@@ -8,6 +7,7 @@ import {
   DateTime,
 } from 'asab_webui_components';
 import { CopyClip } from '@/components/CopyClip';
+import { CopyTooltip } from '@/components/CopyTooltip';
 
 import { getUserList } from '@/requests/user';
 import { UserListData } from '@/interfaces/user.interface';
@@ -39,10 +39,9 @@ export function UserTableScreen() {
         </span>
       ),
       render: ({ row }) => (
-        <CopyClip
-          value={row.username}
-          display={<span title={row.id}>{row.username}</span>}
-        />
+        <CopyTooltip id={`username-tooltip-${row.id}`} copyValue={row.id}>
+          {row.username}
+        </CopyTooltip>
       ),
     },
     {
