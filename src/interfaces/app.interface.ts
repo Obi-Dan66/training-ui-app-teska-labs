@@ -1,5 +1,10 @@
 import React from 'react';
 
+export enum SortDirection {
+  Asc = 'asc',
+  Desc = 'desc',
+}
+
 export interface RouteConfig {
   path: string;
   end: boolean;

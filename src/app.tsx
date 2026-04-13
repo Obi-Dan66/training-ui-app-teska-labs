@@ -9,7 +9,8 @@ const appElement = document.getElementById('app');
 const root = createRoot(appElement!);
 
 (async function init() {
-  const { default: TableApplicationModule } = await import('./module');
+  const { default: TableApplicationModule } =
+    await import('./modules/TableModule');
 
   const config: AppConfig = {
     title: 'TeskaLabs Training UI App',

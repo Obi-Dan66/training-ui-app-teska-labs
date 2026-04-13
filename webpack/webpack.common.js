@@ -11,7 +11,7 @@ module.exports = {
 			template: './public/index.html'
 		}),
 		new MiniCssExtractPlugin(),
-		new Dotenv()
+		new Dotenv({ path: path.resolve(CWD, '.env') }),
 	],
 	module: {
 		rules: [

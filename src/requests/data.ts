@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { TESKALABS_API_URL } from './constants';
+import { TESKALABS_API_URL } from '../constants';
 import {
   DataResponse,
   DetailItem,

@@ -1,7 +1,7 @@
 import { Module } from 'asab_webui_components';
 import { AppInterface } from '../interfaces/app.interface';
 
-import { TableScreen } from './TableScreen';
+import { TableScreen } from '../screens/TableScreen';
 
 export default class TableApplicationModule extends Module {
   constructor(app: AppInterface) {
