@@ -7,6 +7,7 @@ import {
   DataTableLoaderArgs,
   DateTime,
 } from 'asab_webui_components';
+import { CopyClip } from '@/components/CopyClip';
 
 import { getUserList } from '@/requests/user';
 import { UserListData } from '@/interfaces/user.interface';
@@ -37,7 +38,12 @@ export function UserTableScreen() {
           {t('Training|Username')}
         </span>
       ),
-      render: ({ row }) => <span title={row.id}>{row.username}</span>,
+      render: ({ row }) => (
+        <CopyClip
+          value={row.username}
+          display={<span title={row.id}>{row.username}</span>}
+        />
+      ),
     },
     {
       title: (
@@ -46,7 +52,7 @@ export function UserTableScreen() {
           {t('Training|Email')}
         </span>
       ),
-      render: ({ row }) => row.email,
+      render: ({ row }) => <CopyClip value={row.email} />,
     },
     {
       title: (

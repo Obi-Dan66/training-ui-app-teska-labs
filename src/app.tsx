@@ -1,7 +1,6 @@
-import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { HashRouter } from 'react-router';
-
+import '@/styles/copy.scss';
 import { Application, I18nModule, AboutModule } from 'asab_webui_shell';
 import { AppConfig } from '@/interfaces/app.interface';
 

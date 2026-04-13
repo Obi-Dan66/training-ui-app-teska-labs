@@ -3,9 +3,9 @@ import { useParams, useNavigate } from 'react-router';
 import { useTranslation } from 'react-i18next';
 import { Card, CardBody, CardHeader, Col, Row } from 'reactstrap';
 import { DateTime, Spinner } from 'asab_webui_components';
-
 import { getUserDetail } from '@/requests/user';
 import { UserDetailData } from '@/interfaces/user.interface';
+import { CopyClip } from '@/components/CopyClip';
 
 export function DetailScreen() {
   const { id } = useParams<{ id: string }>();
@@ -75,13 +75,19 @@ export function DetailScreen() {
             <CardBody>
               <dl className="mb-0">
                 <dt className="text-muted small">{t('Training|ID')}</dt>
-                <dd className="font-monospace small">{data.id}</dd>
+                <dd className="font-monospace small">
+                  <CopyClip value={data.id} />
+                </dd>
 
                 <dt className="text-muted small">{t('Training|Username')}</dt>
-                <dd>{data.username}</dd>
+                <dd>
+                  <CopyClip value={data.username} />
+                </dd>
 
                 <dt className="text-muted small">{t('Training|Email')}</dt>
-                <dd>{data.email}</dd>
+                <dd>
+                  <CopyClip value={data.email} />
+                </dd>
 
                 <dt className="text-muted small">{t('Training|Created')}</dt>
                 <dd>
