@@ -59,3 +59,8 @@ export interface AppConfig {
   sidebarLogo: BrandImage;
   i18n: I18nConfig;
 }
+
+export interface PaginationParams {
+  p?: number;
+  i?: number;
+}

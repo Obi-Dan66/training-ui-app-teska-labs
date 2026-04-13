@@ -64,5 +64,8 @@ module.exports = {
 	resolve: {
 		extensions: ['.ts', '.tsx', '.js', '.jsx'],
 		modules: [path.resolve(CWD, 'node_modules'), 'node_modules'],
+		alias: {
+			'@': path.resolve(CWD, 'src'),
+		},
 	}
 };

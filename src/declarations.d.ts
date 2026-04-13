@@ -1,6 +1,6 @@
 declare module 'asab_webui_components' {
   import React from 'react';
-  import { AppInterface, SortDirection } from './interfaces/app.interface';
+  import { AppInterface, SortDirection } from '@/interfaces/app.interface';
 
   export class Module {
     App: AppInterface;
@@ -56,11 +56,13 @@ declare module 'asab_webui_components' {
   export function DateTimeRelative(props: {
     value: number | string;
   }): React.ReactElement;
+
+  export function Spinner(): React.ReactElement;
 }
 
 declare module 'asab_webui_shell' {
   import React from 'react';
-  import { AppConfig, AppInterface } from './interfaces/app.interface';
+  import { AppConfig, AppInterface } from '@/interfaces/app.interface';
   import { Module } from 'asab_webui_components';
 
   interface ApplicationProps {

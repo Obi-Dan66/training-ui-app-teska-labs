@@ -8,15 +8,17 @@ import {
   DateTime,
 } from 'asab_webui_components';
 
-import { fetchData } from '../requests/data';
-import { DataItem } from '../interfaces/data.interface';
+import { getUserList } from '@/requests/user';
+import { UserListData } from '@/interfaces/user.interface';
 
-export function TableScreen() {
+export function UserTableScreen() {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
-  const loader = async ({ params }: DataTableLoaderArgs<DataItem>) => {
-    const response = await fetchData({
+  const userTableLoader = async ({
+    params,
+  }: DataTableLoaderArgs<UserListData>) => {
+    const response = await getUserList({
       p: Number(params.p),
       i: Number(params.i),
     });
@@ -27,7 +29,7 @@ export function TableScreen() {
     };
   };
 
-  const columns: DataTableColumn<DataItem>[] = [
+  const userTableColumns: DataTableColumn<UserListData>[] = [
     {
       title: (
         <span>
@@ -90,8 +92,8 @@ export function TableScreen() {
 
   return (
     <DataTableCard2
-      columns={columns}
-      loader={loader}
+      columns={userTableColumns}
+      loader={userTableLoader}
       header={
         <span>
           <i className="bi bi-table me-2" />

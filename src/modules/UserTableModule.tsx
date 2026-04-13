@@ -1,7 +1,8 @@
 import { Module } from 'asab_webui_components';
-import { AppInterface } from '../interfaces/app.interface';
+import { AppInterface } from '@/interfaces/app.interface';
 
-import { TableScreen } from '../screens/TableScreen';
+import { UserTableScreen } from '@/screens/UserTableScreen';
+import { DetailScreen } from '@/screens/DetailScreen';
 
 export default class TableApplicationModule extends Module {
   constructor(app: AppInterface) {
@@ -11,7 +12,14 @@ export default class TableApplicationModule extends Module {
       path: '/',
       end: false,
       name: 'Table',
-      component: TableScreen,
+      component: UserTableScreen,
+    });
+
+    app.Router.addRoute({
+      path: '/detail/:id',
+      end: true,
+      name: 'Detail',
+      component: DetailScreen,
     });
 
     app.Navigation.addItem({

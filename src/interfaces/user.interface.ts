@@ -1,4 +1,4 @@
-export interface DataItem {
+export interface UserListData {
   id: string;
   username: string;
   email: string;
@@ -7,18 +7,13 @@ export interface DataItem {
   address: string;
 }
 
-export interface DetailItem extends DataItem {
+export interface UserDetailData extends UserListData {
   phone_number: string;
   ip_address: string;
   mac_address: string;
 }
 
-export interface DataResponse {
+export interface UserListResponse {
   count: number;
-  data: DataItem[];
-}
-
-export interface PaginationParams {
-  p?: number;
-  i?: number;
+  data: UserListData[];
 }

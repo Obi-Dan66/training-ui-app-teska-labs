@@ -15,7 +15,11 @@
       "skipLibCheck": true,
   
       "forceConsistentCasingInFileNames": true,
-      "resolveJsonModule": true
+      "resolveJsonModule": true,
+
+      "paths": {
+        "@/*": ["./src/*"]
+      }
     },
     "include": ["src"]
   }
