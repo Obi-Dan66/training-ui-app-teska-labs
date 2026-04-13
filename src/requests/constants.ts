@@ -1,0 +1,1 @@
+export const TESKALABS_API_URL = process.env.PUBLIC_TESKALABS_API_URL;

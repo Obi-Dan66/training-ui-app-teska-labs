@@ -1,5 +1,5 @@
 declare module 'asab_webui_components' {
-  import { AppInterface } from './interfaces/AppInterface';
+  import { AppInterface } from './interfaces/app.interface';
 
   export class Module {
     App: AppInterface;
@@ -11,7 +11,7 @@ declare module 'asab_webui_components' {
 
 declare module 'asab_webui_shell' {
   import React from 'react';
-  import { AppConfig, AppInterface } from './interfaces/AppInterface';
+  import { AppConfig, AppInterface } from './interfaces/app.interface';
   import { Module } from 'asab_webui_components';
 
   interface ApplicationProps {

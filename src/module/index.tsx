@@ -1,5 +1,5 @@
 import { Module } from 'asab_webui_components';
-import { AppInterface } from '../interfaces/AppInterface';
+import { AppInterface } from '../interfaces/app.interface';
 
 import { TableScreen } from './TableScreen';
 

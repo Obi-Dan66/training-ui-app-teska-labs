@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 import { HashRouter } from 'react-router';
 
 import { Application, I18nModule, AboutModule } from 'asab_webui_shell';
-import { AppConfig } from './interfaces/AppInterface';
+import { AppConfig } from './interfaces/app.interface';
 
 const appElement = document.getElementById('app');
 const root = createRoot(appElement!);
